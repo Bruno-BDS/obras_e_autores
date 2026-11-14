@@ -1,0 +1,42 @@
+package com.bruno.obras_e_autores.entities;
+
+import jakarta.persistence.*;
+import lombok.*;
+import org.springframework.cglib.core.Local;
+
+import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+@Table(name = "Autor")
+public class AutorEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(nullable = false)
+    private String nome;
+
+    private String sexo;
+
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(name = "data_nascimento")
+    private LocalDateTime dataNascimento;
+
+    @Column(name = "pais_origem")
+    private String paisOrigem;
+
+    @Column(unique = true)
+    private String cpf;
+
+    @ManyToMany(mappedBy = "autores")
+    @Builder.Default
+    private Set<ObraEntity> obras = new HashSet<>();
+}
