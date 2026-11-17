@@ -1,4 +1,4 @@
-package com.bruno.obras_e_autores.business.request;
+package com.bruno.obras_e_autores.business.dto.request;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.AssertTrue;
@@ -29,7 +29,7 @@ public class ObraRequestDTO {
     private Set<AutorRequestDTO> autores;
 
     @AssertTrue(message = "Informe a data de publicação ou de exposição")
-    public boolean dataObrigatoriaInformada() {
+    public boolean isDataObrigatoriaInformada() {
         return dataDeExposicao != null || dataDePublicacao != null;
     }
 }
