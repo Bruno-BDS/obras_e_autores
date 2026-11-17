@@ -1,4 +1,4 @@
-package com.bruno.obras_e_autores.business.request;
+package com.bruno.obras_e_autores.business.dto.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

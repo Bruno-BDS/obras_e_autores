@@ -3,6 +3,7 @@ package com.bruno.obras_e_autores.infrastructure.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,6 +19,7 @@ public class AutorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String nome;
 
@@ -27,9 +29,9 @@ public class AutorEntity {
     private String email;
 
     @Column(name = "data_nascimento")
-    private LocalDateTime dataNascimento;
+    private LocalDate dataNascimento;
 
-    @Column(name = "pais_origem")
+    @Column(name = "pais_origem", nullable = false)
     private String paisOrigem;
 
     @Column(unique = true)

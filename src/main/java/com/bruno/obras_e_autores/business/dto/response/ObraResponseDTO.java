@@ -1,4 +1,4 @@
-package com.bruno.obras_e_autores.business.response;
+package com.bruno.obras_e_autores.business.dto.response;
 
 import lombok.*;
 
