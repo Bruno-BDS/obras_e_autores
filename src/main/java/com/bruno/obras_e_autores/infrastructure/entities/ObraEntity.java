@@ -1,4 +1,4 @@
-package com.bruno.obras_e_autores.entities;
+package com.bruno.obras_e_autores.infrastructure.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

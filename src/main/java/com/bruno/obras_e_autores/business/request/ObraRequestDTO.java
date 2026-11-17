@@ -1,4 +1,4 @@
-package com.bruno.obras_e_autores.Business.request;
+package com.bruno.obras_e_autores.business.request;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.AssertTrue;
