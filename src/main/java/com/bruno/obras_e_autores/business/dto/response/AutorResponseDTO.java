@@ -1,5 +1,6 @@
 package com.bruno.obras_e_autores.business.dto.response;
 
+import com.bruno.obras_e_autores.infrastructure.enums.SexoAutor;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -13,7 +14,7 @@ public class AutorResponseDTO {
 
     private Long id;
     private String nome;
-    private String sexo;
+    private SexoAutor sexo;
     private String email;
     private LocalDate dataNascimento;
     private String paisOrigem;
