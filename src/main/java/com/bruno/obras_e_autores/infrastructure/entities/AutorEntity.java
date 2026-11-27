@@ -1,5 +1,6 @@
 package com.bruno.obras_e_autores.infrastructure.entities;
 
+import com.bruno.obras_e_autores.infrastructure.enums.SexoAutor;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,7 +24,9 @@ public class AutorEntity {
     @Column(nullable = false)
     private String nome;
 
-    private String sexo;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Sexo_do_Autor")
+    private SexoAutor sexoAutor;
 
     @Column(nullable = false, unique = true)
     private String email;

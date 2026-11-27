@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class AutorConverter {
 
-    public AutorEntity paraEntity(AutorRequestDTO dto) {
+    public AutorEntity paraAutorEntity(AutorRequestDTO dto) {
         return AutorEntity.builder()
                 .nome(dto.getNome())
-                .sexo(dto.getSexo())
+                .sexoAutor(dto.getSexo())
                 .email(dto.getEmail())
                 .paisOrigem(dto.getPaisOrigem())
                 .dataNascimento(dto.getDataNascimento())
@@ -25,7 +25,7 @@ public class AutorConverter {
         return AutorResponseDTO.builder()
                 .id(entity.getId())
                 .nome(entity.getNome())
-                .sexo(entity.getSexo())
+                .sexo(entity.getSexoAutor())
                 .email(entity.getEmail())
                 .dataNascimento(entity.getDataNascimento())
                 .paisOrigem(entity.getPaisOrigem())
